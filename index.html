@@ -22,7 +22,21 @@
     .contact-box{background:var(--navy);border-radius:28px;padding:42px;color:#fff;display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px}.contact-box h2{font-size:clamp(30px,4vw,42px);margin:0 0 8px}.contact-box p{margin:5px 0;color:#dfe7f2}.contact-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}.contact-box .outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}footer{padding:25px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:16px}.mobile-bar{display:none}
     .desktop-nav {   display: none; }{.desktop-nav{display:none}.hero-grid,.about-grid,.tour-layout{grid-template-columns:1fr}.hero-grid{min-height:auto;padding:52px 0;gap:28px}.hero-card{max-width:660px}.why-grid{grid-template-columns:repeat(2,1fr)}.tour-layout{gap:26px}.contact-box{grid-template-columns:1fr}.contact-actions{justify-content:flex-start}}
     .mobile-bar {   display: grid; }{body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}.wrap{width:min(100% - 24px,1080px)}.notice{font-size:11.5px}.nav{min-height:65px}.brand img{width:45px;height:45px}.brand strong{font-size:12.5px}.brand small{font-size:11px}.hero-grid{padding:38px 0 43px}.tag{font-size:10px}h1{font-size:clamp(35px,11vw,47px);line-height:1.06}.lead{font-size:16px}.actions{display:grid;grid-template-columns:1fr;margin-top:23px}.actions .btn{width:100%}.hero-meta{font-size:13px}.hero-card{padding:21px 18px;border-radius:20px}.hero-card h2{font-size:23px}.quick{font-size:13px;padding:11px 0}section{padding:50px 0}.head{text-align:left;margin-bottom:23px}.head h2{font-size:31px}.head p{font-size:14px}.course-grid,.why-grid{grid-template-columns:1fr}.course-card{padding:18px}.course-card h3{font-size:21px}.course-top{gap:10px}.syllabus{columns:1;font-size:14px}.more{grid-template-columns:1fr;align-items:stretch}.more .btn{width:100%}.course-tags{gap:7px}.course-tag{font-size:12.5px;padding:6px 10px}.cert-grid{grid-template-columns:1fr}.cert-mark{width:62px;height:62px}.about-grid{gap:24px}.years{min-height:190px;padding:24px;border-radius:20px}.years b{font-size:42px}.about h2{font-size:31px}.about p{font-size:14.5px}.why-item{padding:17px}.tour-copy h2{font-size:31px}.photo-grid{grid-template-columns:1fr 1fr;grid-template-rows:210px 140px}.photo-grid a:first-child{grid-column:1/3;grid-row:auto}.contact-box{padding:25px 20px;border-radius:20px}.contact-box h2{font-size:31px}.contact-actions{display:grid;grid-template-columns:1fr;width:100%}.contact-actions .btn{width:100%}.foot{flex-direction:column;gap:4px}.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:8px 9px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.98);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(11,45,92,.10)}.mobile-bar a{min-height:48px;border-radius:12px;background:#eef2f7;color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12.5px}.mobile-bar a:first-child{background:var(--gold);color:#172033}}
-  </style>
+ /* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #d4a017;
+  outline-offset: 3px;
+}
+
+/* Make text links easier to identify */
+main p a,
+main li a,
+.breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+} </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Lal Bahadur Shastri Training Institute","address":{"@type":"PostalAddress","addressLocality":"Almora","addressRegion":"Uttarakhand","postalCode":"263601","addressCountry":"IN"},"telephone":"+91-9837886406","openingHours":"Mo-Sa 08:00-17:00"}</script>
 </head>
 <body>
