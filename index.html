@@ -36,7 +36,27 @@ main li a,
 .breadcrumb a {
   text-decoration: underline;
   text-underline-offset: 3px;
-} </style>
+} .course-page-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--gold);
+  color: #172033;
+  font-weight: 800;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.course-page-link:hover {
+  background: #bd8d0f;
+  transform: translateY(-2px);
+}
+
+.course-page-link:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}</style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Lal Bahadur Shastri Training Institute","address":{"@type":"PostalAddress","addressLocality":"Almora","addressRegion":"Uttarakhand","postalCode":"263601","addressCountry":"IN"},"telephone":"+91-9837886406","openingHours":"Mo-Sa 08:00-17:00"}</script>
 </head>
 <body>
