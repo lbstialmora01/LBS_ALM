@@ -70,6 +70,50 @@ main li a,
 .course-page-link:focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 4px;
+}.director-section {
+  padding: 45px 0;
+  background: #f7f9fc;
+}
+
+.director-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 820px;
+}
+
+.director-photo {
+  width: 145px;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 26px rgba(11, 45, 92, 0.15);
+}
+
+.director-label {
+  color: var(--gold);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.director-card h2 {
+  margin: 5px 0;
+  color: var(--navy);
+}
+
+.director-role {
+  margin: 0 0 10px;
+  font-weight: 800;
+  color: #667085;
+}
+
+@media (max-width: 600px) {
+  .director-card {
+    flex-direction: column;
+    text-align: center;
+  }
 }</style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Lal Bahadur Shastri Training Institute","address":{"@type":"PostalAddress","addressLocality":"Almora","addressRegion":"Uttarakhand","postalCode":"263601","addressCountry":"IN"},"telephone":"+91-9837886406","openingHours":"Mo-Sa 08:00-17:00"}</script>
 </head>
@@ -121,61 +165,24 @@ main li a,
     <section class="cert" id="certificate"><div class="wrap cert-grid"><div class="cert-mark">✓</div><div><h2>Authentic Certified Diplomas &amp; Certificates</h2><p>Diplomas and certificates are officially issued through the institute’s academic collaboration with Himalayan Garhwal University, Uttarakhand. They are authentic and can be used for government and non-government job applications and educational purposes, subject to the requirements of the concerned organisation.</p></div></div></section>
 
     <section id="about"><div class="wrap about-grid"><div class="years"><b>15+</b><span>Years of computer education and skill development in Almora.</span></div><div class="about"><h2>Practical learning with supportive guidance</h2><p>Lal Bahadur Shastri Training Institute has been providing computer education in Almora for more than 15 years. The institute focuses on practical learning, clear guidance and a friendly environment where students can build useful skills with confidence.</p><p>The institute works in academic collaboration with Himalayan Garhwal University, Uttarakhand.</p></div></div></section>
-<section class="director-section" id="director">
-  <div class="wrap director-layout">
+<section class="director-section">
+  <div class="wrap director-card">
+    <img
+      src="pratap-singh-bhandari.webp"
+      alt="Mr. Pratap Singh Bhandari"
+      class="director-photo"
+      loading="lazy"
+    >
 
-    <div class="director-photo">
-      <img
-        src="pratap-singh-bhandari.webp"
-        alt="Mr. Pratap Singh Bhandari, Director and Main Instructor"
-        width="800"
-        height="800"
-        loading="lazy"
-        decoding="async"
-      >
-    </div>
-
-    <div class="director-content">
+    <div>
       <span class="director-label">Meet the Director</span>
-
-      <h2>Guidance from an Experienced Instructor</h2>
-
-      <h3>Mr. Pratap Singh Bhandari</h3>
-
-      <p class="director-role">
-        Director and Main Instructor
-      </p>
-
+      <h2>Mr. Pratap Singh Bhandari</h2>
+      <p class="director-role">Director and Main Instructor</p>
       <p>
-        Mr. Pratap Singh Bhandari leads Lal Bahadur Shastri Training
-        Institute and personally guides students in practical computer
-        education. His teaching approach focuses on clear explanations,
-        regular practice and individual support.
+        Providing practical computer training with personal guidance
+        and regular hands-on practice.
       </p>
-
-      <div class="director-details">
-        <div>
-          <strong>Role</strong>
-          <span>Director and Main Instructor</span>
-        </div>
-
-        <div>
-          <strong>Teaching Areas</strong>
-          <span>Computer Applications, Tally, Typing and Office Tools</span>
-        </div>
-
-        <div>
-          <strong>Approach</strong>
-          <span>Practical, supportive and student-focused</span>
-        </div>
-      </div>
-
-      <blockquote>
-        “Our aim is to help every student develop useful computer skills
-        through clear guidance and regular practical training.”
-      </blockquote>
     </div>
-
   </div>
 </section>
     <section class="why" id="why"><div class="wrap"><div class="head"><h2>Why Choose Us?</h2><p>A trusted and supportive place to learn practical computer skills.</p></div><div class="why-grid"><article class="why-item"><h3>15+ Years of Experience</h3><p>More than 15 years of computer education and skill development in Almora.</p></article><article class="why-item"><h3>Certified Programs</h3><p>Diploma and certificate programs with certification details available from the institute.</p></article><article class="why-item"><h3>Practical Learning</h3><p>Course topics are supported by hands-on practice and useful exercises.</p></article><article class="why-item"><h3>Friendly Environment</h3><p>A welcoming atmosphere where students can learn and ask questions comfortably.</p></article><article class="why-item"><h3>Student Guidance</h3><p>Clear guidance to help students understand courses and choose suitable training.</p></article><article class="why-item"><h3>Convenient Timings</h3><p>The institute is currently open from 8:00 AM to 5:00 PM.</p></article></div></div></section>
