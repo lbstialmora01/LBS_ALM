@@ -37,25 +37,39 @@ main li a,
   text-decoration: underline;
   text-underline-offset: 3px;
 } .course-page-link {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   margin-top: 14px;
-  padding: 10px 16px;
-  border-radius: 10px;
+  color: var(--navy);
+  font-weight: 900;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.course-page-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 45%;
+  height: 3px;
+  border-radius: 3px;
   background: var(--gold);
-  color: #172033;
-  font-weight: 800;
-  transition: background 0.2s, transform 0.2s;
+  transition: width 0.25s ease;
 }
 
 .course-page-link:hover {
-  background: #bd8d0f;
-  transform: translateY(-2px);
+  color: #bd8d0f;
+}
+
+.course-page-link:hover::after {
+  width: 100%;
 }
 
 .course-page-link:focus-visible {
-  outline: 3px solid var(--navy);
-  outline-offset: 3px;
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
 }</style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Lal Bahadur Shastri Training Institute","address":{"@type":"PostalAddress","addressLocality":"Almora","addressRegion":"Uttarakhand","postalCode":"263601","addressCountry":"IN"},"telephone":"+91-9837886406","openingHours":"Mo-Sa 08:00-17:00"}</script>
 </head>
