@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lbstialmora01.github.io/LBS_ALM/sitemap.xml
