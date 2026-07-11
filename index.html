@@ -280,14 +280,16 @@ main li a,
     margin-left: 0;
   }
 
-  .certificate-slider {
-    gap: 16px;
-    padding-right: 16px;
-  }
-
-  .certificate-slide {
-    flex-basis: 84%;
-  }
+.certificate-slider {
+  gap: 16px;
+  padding: 8px 0 20px;
+  scroll-snap-type: x mandatory;
+}
+.certificate-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+}
 
   .certificate-slider-arrow {
     display: none;
