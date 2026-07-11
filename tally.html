@@ -24,7 +24,180 @@ section{padding:66px 0}.section-head{max-width:720px;margin:0 0 28px}.section-he
 footer{padding:25px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:16px}.mobile-bar{display:none}
 @media(max-width:900px){.navlinks{display:none}.hero-grid{grid-template-columns:1fr;gap:26px}.topic-grid{grid-template-columns:repeat(2,1fr)}.course-links{grid-template-columns:repeat(2,1fr)}.cta{grid-template-columns:1fr}.cta-actions{justify-content:flex-start}}
 @media(max-width:620px){body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}.wrap{width:min(100% - 24px,1080px)}.notice{font-size:11.5px}.nav{min-height:65px}.brand img{width:45px;height:45px}.brand strong{font-size:12.5px}.brand small{font-size:11px}.hero-grid{padding:38px 0}.course-hero h1{font-size:clamp(35px,11vw,48px)}.course-hero .sub{font-size:20px}.lead{font-size:15px}.actions{display:grid;grid-template-columns:1fr}.actions .btn{width:100%}.summary-card{padding:21px 18px;border-radius:20px}section{padding:48px 0}.section-head h2{font-size:31px}.section-head p{font-size:14px}.topic-grid,.course-links{grid-template-columns:1fr}.cert-panel{grid-template-columns:1fr;padding:25px 21px}.cert-mark{width:56px;height:56px}.cta{padding:27px 21px;border-radius:22px}.cta-actions{display:grid;grid-template-columns:1fr;width:100%}.cta-actions .btn{width:100%}.foot{display:block;text-align:center}.foot span{display:block;margin:4px}.mobile-bar{position:fixed;display:grid;grid-template-columns:repeat(3,1fr);left:0;right:0;bottom:0;z-index:50;background:#fff;border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom));box-shadow:0 -9px 25px rgba(0,0,0,.08)}.mobile-bar a{min-height:47px;display:grid;place-items:center;color:var(--navy);font-size:12px;font-weight:900;border-right:1px solid var(--line)}.mobile-bar a:last-child{border-right:0}}
-</style>
+/* Professional Tally syllabus */
+.syllabus-section {
+  background:
+    linear-gradient(
+      180deg,
+      var(--paper) 0%,
+      #ffffff 100%
+    );
+}
+
+.syllabus-heading {
+  margin-bottom: 34px;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #8a6500;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.module-card {
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(11, 45, 92, 0.07);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.module-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold) 0%,
+      #f1ce69 100%
+    );
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+  border-color: #d3dbe5;
+  box-shadow: 0 17px 38px rgba(11, 45, 92, 0.11);
+}
+
+.module-card-wide {
+  grid-column: 1 / -1;
+}
+
+.module-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 21px;
+}
+
+.module-number {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.module-label {
+  display: block;
+  margin-bottom: 2px;
+  color: #8a6500;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.module-card h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.module-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.module-list-wide {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+}
+
+.module-list li {
+  position: relative;
+  padding: 11px 8px 11px 25px;
+  border-top: 1px solid #edf0f4;
+  color: #3c485c;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.module-list li::before {
+  content: "✓";
+  position: absolute;
+  top: 11px;
+  left: 1px;
+  color: #9b7100;
+  font-weight: 900;
+}
+
+.syllabus-footer {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  max-width: 820px;
+  margin: 26px auto 0;
+  padding: 20px 22px;
+  border: 1px solid #eadcae;
+  border-radius: 18px;
+  background: #fffaf0;
+}
+
+.syllabus-footer-icon {
+  display: grid;
+  flex: 0 0 45px;
+  width: 45px;
+  height: 45px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.syllabus-footer strong {
+  display: block;
+  color: var(--navy);
+  font-size: 16px;
+}
+
+.syllabus-footer p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}</style>
 </head>
 <body>
 
@@ -68,33 +241,132 @@ footer{padding:25px 0;color:var(--muted);font-size:13px}.foot{display:flex;justi
       </aside>
     </div>
   </section>
-
-  
-<section class="syllabus-section">
+<section class="syllabus-section" id="syllabus">
   <div class="wrap">
-    <div class="section-head">
-      <h2>Course Syllabus</h2>
-      <p>The main subjects currently listed for this course.</p>
+
+    <div class="section-head syllabus-heading">
+      <span class="section-label">Course Curriculum</span>
+
+      <h2>Professional Tally Course Syllabus</h2>
+
+      <p>
+        The course is organised into practical modules covering business
+        transactions, banking, taxation, inventory, billing and payroll.
+      </p>
     </div>
-    <div class="topic-grid"><div class="topic"><b>1</b><span>Purchase Entry</span></div><div class="topic"><b>2</b><span>Sale Entry</span></div><div class="topic"><b>3</b><span>Payment Entry</span></div><div class="topic"><b>4</b><span>Receipt Entry</span></div><div class="topic"><b>5</b><span>Deposit Entry</span></div><div class="topic"><b>6</b><span>Withdrawal Entry</span></div><div class="topic"><b>7</b><span>Transfer Entry</span></div><div class="topic"><b>8</b><span>GST</span></div><div class="topic"><b>9</b><span>Discount</span></div><div class="topic"><b>10</b><span>Stock Management</span></div><div class="topic"><b>11</b><span>Stock Transfer</span></div><div class="topic"><b>12</b><span>Payroll</span></div><div class="topic"><b>13</b><span>Billing</span></div><div class="topic"><b>14</b><span>Hotel Billing</span></div><div class="topic"><b>15</b><span>Pre-booking Entry</span></div><div class="topic"><b>16</b><span>Loan Entry</span></div><div class="topic"><b>17</b><span>Buy One Get One Free Entry</span></div><div class="topic"><b>18</b><span>GST Billing</span></div><div class="topic"><b>19</b><span>TCS Entry</span></div></div>
+
+    <div class="module-grid">
+
+      <article class="module-card">
+        <div class="module-top">
+          <span class="module-number">01</span>
+
+          <div>
+            <span class="module-label">Module One</span>
+            <h3>Business Transactions</h3>
+          </div>
+        </div>
+
+        <ul class="module-list">
+          <li>Purchase Entry</li>
+          <li>Sales Entry</li>
+          <li>Payment Entry</li>
+          <li>Receipt Entry</li>
+        </ul>
+      </article>
+
+      <article class="module-card">
+        <div class="module-top">
+          <span class="module-number">02</span>
+
+          <div>
+            <span class="module-label">Module Two</span>
+            <h3>Banking and Finance</h3>
+          </div>
+        </div>
+
+        <ul class="module-list">
+          <li>Deposit Entry</li>
+          <li>Withdrawal Entry</li>
+          <li>Transfer Entry</li>
+          <li>Loan Entry</li>
+        </ul>
+      </article>
+
+      <article class="module-card">
+        <div class="module-top">
+          <span class="module-number">03</span>
+
+          <div>
+            <span class="module-label">Module Three</span>
+            <h3>GST and Taxation</h3>
+          </div>
+        </div>
+
+        <ul class="module-list">
+          <li>GST Entries</li>
+          <li>GST Billing</li>
+          <li>TCS Entry</li>
+          <li>Discount Entry</li>
+        </ul>
+      </article>
+
+      <article class="module-card">
+        <div class="module-top">
+          <span class="module-number">04</span>
+
+          <div>
+            <span class="module-label">Module Four</span>
+            <h3>Inventory Management</h3>
+          </div>
+        </div>
+
+        <ul class="module-list">
+          <li>Stock Management</li>
+          <li>Stock Transfer</li>
+          <li>Buy One Get One Free Entry</li>
+        </ul>
+      </article>
+
+      <article class="module-card module-card-wide">
+        <div class="module-top">
+          <span class="module-number">05</span>
+
+          <div>
+            <span class="module-label">Module Five</span>
+            <h3>Billing and Payroll</h3>
+          </div>
+        </div>
+
+        <ul class="module-list module-list-wide">
+          <li>Business Billing</li>
+          <li>Hotel Billing</li>
+          <li>Pre-booking Entry</li>
+          <li>Payroll</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <div class="syllabus-footer">
+      <div class="syllabus-footer-icon">✓</div>
+
+      <div>
+        <strong>Practical Learning Approach</strong>
+
+        <p>
+          Students practise transactions, billing and accounting entries
+          through guided exercises on the computer.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
-  <section>
-    <div class="wrap">
-      <div class="cert-panel">
-        <div class="cert-mark">✓</div>
-        <div>
-          <h2>Authentic Certified Program</h2>
-          <p>Diplomas and certificates are officially issued through the institute’s academic collaboration with Himalayan Garhwal University, Uttarakhand. They are authentic and can be used for government and non-government job applications and educational purposes, subject to the requirements of the concerned organisation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="other">
     <div class="wrap">
-      <div class="section-head"><h2>Explore Other Courses</h2><p>Compare the main courses currently listed by the institute.</p></div>
+      <div class="section-head"><h2>Explore Other Courses</h2></div>
       <div class="course-links"><a class="course-link" href="dit.html"><strong>DIT</strong><span>1 Year · View course</span></a><a class="course-link" href="dafa.html"><strong>DAFA</strong><span>6 Months · View course</span></a><a class="course-link" href="index.html#courses"><strong>Other courses</strong></a></div>
     </div>
   </section>
