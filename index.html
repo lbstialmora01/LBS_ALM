@@ -114,6 +114,172 @@ main li a,
     flex-direction: column;
     text-align: center;
   }
+}
+  /* Certificate distribution slider */
+.certificate-showcase {
+  padding: 72px 0;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f7f9fc 100%
+  );
+}
+
+.certificate-showcase-heading {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.certificate-showcase-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #9b7100;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.certificate-showcase-heading h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.certificate-showcase-heading p {
+  max-width: 630px;
+  margin: 14px auto 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.certificate-slider-wrapper {
+  position: relative;
+}
+
+.certificate-slider {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  padding: 8px 4px 20px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.certificate-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.certificate-slide {
+  flex: 0 0 calc((100% - 44px) / 3);
+  margin: 0;
+  overflow: hidden;
+  scroll-snap-align: start;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #f3f5f8;
+  box-shadow: 0 14px 34px rgba(7, 31, 64, 0.10);
+}
+
+.certificate-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  object-position: center;
+  background: #f3f5f8;
+}
+
+.certificate-slider-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 9px 24px rgba(7, 31, 64, 0.24);
+  transform: translateY(-50%);
+}
+
+.certificate-slider-arrow:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.certificate-slider-arrow-left {
+  left: -21px;
+}
+
+.certificate-slider-arrow-right {
+  right: -21px;
+}
+
+.certificate-slider-help {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.certificate-slider-count {
+  color: var(--navy);
+}
+
+.certificate-slider-count strong {
+  color: #9b7100;
+}
+
+@media (max-width: 1000px) {
+  .certificate-slider-arrow-left {
+    left: 8px;
+  }
+
+  .certificate-slider-arrow-right {
+    right: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .certificate-slide {
+    flex-basis: calc((100% - 22px) / 2);
+  }
+}
+
+@media (max-width: 620px) {
+  .certificate-showcase {
+    padding: 54px 0;
+  }
+
+  .certificate-showcase-heading {
+    text-align: left;
+  }
+
+  .certificate-showcase-heading p {
+    margin-left: 0;
+  }
+
+  .certificate-slider {
+    gap: 16px;
+    padding-right: 16px;
+  }
+
+  .certificate-slide {
+    flex-basis: 84%;
+  }
+
+  .certificate-slider-arrow {
+    display: none;
+  }
 }</style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Lal Bahadur Shastri Training Institute","address":{"@type":"PostalAddress","addressLocality":"Almora","addressRegion":"Uttarakhand","postalCode":"263601","addressCountry":"IN"},"telephone":"+91-9837886406","openingHours":"Mo-Sa 08:00-17:00"}</script>
 </head>
@@ -163,7 +329,152 @@ main li a,
     </div><div class="more"><div><h3>Other Available Courses</h3><p>Other short-term and skill-based courses are also available. Contact the institute for these course details.</p><div class="course-tags" aria-label="Other available courses"><span class="course-tag">English Typing</span><span class="course-tag">Hindi Typing</span><span class="course-tag">MS Office</span><span class="course-tag">Photoshop</span><span class="course-tag">CorelDRAW</span><span class="course-tag">HTML</span><span class="course-tag">C Programming</span><span class="course-tag">C++</span><span class="course-tag">More Courses</span></div></div><a class="btn primary" href="tel:+919837886406">Ask more about courses</a></div></div></section>
 
     <section class="cert" id="certificate"><div class="wrap cert-grid"><div class="cert-mark">✓</div><div><h2>Authentic Certified Diplomas &amp; Certificates</h2><p>Diplomas and certificates are officially issued through the institute’s academic collaboration with Himalayan Garhwal University, Uttarakhand. They are authentic and can be used for government and non-government job applications and educational purposes, subject to the requirements of the concerned organisation.</p></div></div></section>
-<section class="director-section">
+<section class="certificate-showcase" id="certificate-distribution">
+  <div class="container">
+
+    <div class="certificate-showcase-heading">
+      <span class="certificate-showcase-label">
+        Student Achievements
+      </span>
+
+      <h2>Certificate Distribution</h2>
+
+      <p>
+        Celebrating students who successfully completed their training
+        programs at Lal Bahadur Shastri Training Institute, Almora.
+      </p>
+    </div>
+
+    <div class="certificate-slider-wrapper">
+
+      <button
+        class="certificate-slider-arrow certificate-slider-arrow-left"
+        type="button"
+        aria-label="Previous photographs"
+        data-certificate-direction="-1"
+      >
+        &#10094;
+      </button>
+
+      <div
+        class="certificate-slider"
+        id="certificateSlider"
+        tabindex="0"
+        aria-label="Certificate distribution photographs"
+      >
+
+        <figure class="certificate-slide">
+          <img
+            src="certificate-collage-01.webp"
+            alt="Collage of students and certificate holders"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <figure class="certificate-slide">
+          <img
+            src="certificate-collage-02.webp"
+            alt="Students completing institute courses"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <figure class="certificate-slide">
+          <img
+            src="certificate-collage-03.webp"
+            alt="Student achievement and certificate collage"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <figure class="certificate-slide">
+          <img
+            src="certificate-collage-04.webp"
+            alt="Successful course-completion students"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <figure class="certificate-slide">
+          <img
+            src="certificate-collage-05.webp"
+            alt="Students after completing training"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <figure class="certificate-slide">
+          <img
+            src="certificate-collage-06.webp"
+            alt="Institute students and certificate recipients"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <figure class="certificate-slide">
+          <img
+            src="certificate-collage-07.webp"
+            alt="Certificate holders from computer courses"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <figure class="certificate-slide">
+          <img
+            src="certificate-collage-08.webp"
+            alt="Student certificate-distribution collage"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+      </div>
+
+      <button
+        class="certificate-slider-arrow certificate-slider-arrow-right"
+        type="button"
+        aria-label="Next photographs"
+        data-certificate-direction="1"
+      >
+        &#10095;
+      </button>
+
+    </div>
+
+    <div class="certificate-slider-help">
+      <span>Swipe or use the arrows to view more photographs</span>
+
+      <span class="certificate-slider-count">
+        <strong id="certificateCurrent">1</strong> / 8
+      </span>
+    </div>
+
+  </div>
+</section>
+    <section class="director-section">
   <div class="wrap director-card">
     <img
       src="pratap-singh-bhandari.webp"
